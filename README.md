@@ -2,10 +2,6 @@
 
 Google Gemini とリバーシ (オセロ) で対戦できるウェブサイトです。
 
-## 遊ぶ
-
-https://cachytoki.xyz/game/llm-reversi
-
 ## ローカルで実行
 
 Node.js 20.12以上が必要です。
