@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LLMリバーシ</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header>
+      <h1>LLMリバーシ</h1>
+      <p class="sub">Google Gemini と対戦 <span id="model" class="model"></span></p>
+    </header>
+
+    <section class="setup" id="setup">
+      <label>あなたの石
+        <select id="humanColor">
+          <option value="B">黒 (先手)</option>
+          <option value="W">白 (後手)</option>
+        </select>
+      </label>
+      <label>AIのキャラ
+        <select id="persona"></select>
+      </label>
+      <button id="newGame" class="primary">新しいゲーム</button>
+    </section>
+
+    <section class="game">
+      <div class="scores">
+        <div class="score" id="scoreB"><span class="disc black"></span><span class="label" id="labelB">黒</span><b id="countB">2</b></div>
+        <div class="score" id="scoreW"><span class="disc white"></span><span class="label" id="labelW">白</span><b id="countW">2</b></div>
+      </div>
+
+      <div class="board-wrap">
+        <div class="coords cols"><span>a</span><span>b</span><span>c</span><span>d</span><span>e</span><span>f</span><span>g</span><span>h</span></div>
+        <div class="coords rows"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span></div>
+        <div class="board" id="board" role="grid" aria-label="リバーシ盤"></div>
+      </div>
+
+      <div class="status" id="status">「新しいゲーム」を押して開始</div>
+
+      <div class="bubble" id="bubble" hidden>
+        <div class="avatar">🤖</div>
+        <p id="comment"></p>
+      </div>
+
+      <details class="log">
+        <summary>棋譜</summary>
+        <ol id="log"></ol>
+      </details>
+    </section>
+  </main>
+  <script type="module" src="app.js"></script>
+</body>
+</html>

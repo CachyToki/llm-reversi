@@ -1,0 +1,11 @@
+{
+  "name": "llm-reversi",
+  "version": "1.0.0",
+  "description": "Play Reversi against Google Gemini",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": { "node": ">=20.12" }
+}
