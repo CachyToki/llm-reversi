@@ -1,17 +1,6 @@
 # LLMリバーシ
 
-Google Gemini とリバーシ (オセロ) で対戦できるウェブサイトです。
-
-## ローカルで実行
-
-Node.js 20.12以上が必要です。
-
-```bash
-cp .env.example .env   # GEMINI_API_KEY を記入
-npm start
-```
-
-起動したらブラウザで http://localhost:3000 を開きます。
+Google Gemini とリバーシ (オセロ) で対戦できるローカルのウェブサイトです。
 
 ## しくみ
 
@@ -20,5 +9,16 @@ npm start
 - 返ってきた手はサーバーで合法性を検証し、不正なら理由を添えて最大3回リトライ。それでも失敗した場合は最も多く返せる手で代打ち
 - APIキーはサーバー側にのみ保持し、ブラウザには渡さない
 - AIのキャラ (フレンドリー / ライバル / 老師) を選べ、一手ごとにコメントを返す
+
+## 実行
+
+Node.js 20.12以上とGoogle GeminiのAPIとそれなりのトークンが必要です。
+
+```bash
+cp .env.example .env   # GEMINI_API_KEY を記入
+npm start
+```
+
+起動したらブラウザで http://localhost:3000 を開きます。
 
 すべてのコードはClaude Opus 5.5によって作られました。(何ならこれらはOpus 5.5でゲームアプリを作れるかの実験目的)
